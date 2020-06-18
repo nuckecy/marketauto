@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+
+    <!-- CSS Assets -->
+    <link href="assets/lib/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="assets/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+    <link href="assets/lib/jqvmap/jqvmap.min.css" rel="stylesheet">
+
+    <!-- Page CSS -->
+    <link href="assets/lib/prismjs/themes/prism-vs.css" rel="stylesheet">
+    <link href="assets/lib/datatables.net-dt/css/jquery.dataTables.min.css" rel="stylesheet">
+    <link href="assets/lib/datatables.net-responsive-dt/css/responsive.dataTables.min.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/buttons/1.6.2/css/buttons.dataTables.min.css" rel="stylesheet">
+    <link href="assets/lib/select2/css/select2.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/dashforge.css">
+    <link rel="stylesheet" href="assets/css/dashforge.dashboard.css">
+
+    <title>User Dashboard | Portal</title>
+    <meta name="description" content=" Portal">
+  </head>
+  <body>
+
+    <!-- Side Navigation -->
+    <aside class="aside aside-fixed">
+      <div class="aside-header">
+        <a href="index.html" class="aside-logo">Admin<span>Portal</span></a>
+        <a href="" class="aside-menu-link">
+          <i data-feather="menu"></i>
+          <i data-feather="x"></i>
+        </a>
+      </div>
+      <div class="aside-body">
+        <div class="aside-loggedin">
+          <div class="d-flex align-items-center justify-content-start">
+            <a href="" class="avatar"><img src="https://via.placeholder.com/500" class="rounded-circle" alt=""></a>
+            <div class="aside-alert-link">
+              <!-- <a href="" class="new" data-toggle="tooltip" title="You have 2 unread messages"><i data-feather="message-square"></i></a> -->
+              <!-- <a href="" class="new" data-toggle="tooltip" title="You have 4 new notifications"><i data-feather="bell"></i></a> -->
+              <a href="" data-toggle="tooltip" title="Sign out"><i data-feather="log-out"></i></a>
+            </div>
+          </div>
+          <div class="aside-loggedin-user">
+            <a href="#loggedinMenu" class="d-flex align-items-center justify-content-between mg-b-2" data-toggle="collapse">
+              <h6 class="tx-semibold mg-b-0">Katherine Pechon</h6>
+              <i data-feather="chevron-down"></i>
+            </a>
+            <p class="tx-color-03 tx-12 mg-b-0">Administrator</p>
+          </div>
+          <div class="collapse" id="loggedinMenu">
+            <ul class="nav nav-aside mg-b-0">
+              <li class="nav-item"><a href="" class="nav-link"><i data-feather="edit"></i> <span>Edit Profile</span></a></li>
+              <li class="nav-item"><a href="" class="nav-link"><i data-feather="user"></i> <span>View Profile</span></a></li>
+              <li class="nav-item"><a href="" class="nav-link"><i data-feather="settings"></i> <span>Account Settings</span></a></li>
+              <li class="nav-item"><a href="" class="nav-link"><i data-feather="help-circle"></i> <span>Help Center</span></a></li>
+              <li class="nav-item"><a href="" class="nav-link"><i data-feather="log-out"></i> <span>Sign Out</span></a></li>
+            </ul>
+          </div>
+        </div><!-- aside-loggedin -->
+        <ul class="nav nav-aside">
+          <li class="nav-label">Quick Actions</li>
+          <li class="nav-item"><a href="#" class="nav-link"><i data-feather="shopping-bag"></i><span>Quick Actions</span></a></li>
+          
+          <li class="nav-label mg-t-25">Menu</li>
+          <li class="nav-item"><a href="#" class="nav-link"><i data-feather="shopping-bag"></i> <span>Dashboard</span></a></li>
+          <li class="nav-item"><a href="#" class="nav-link"><i data-feather="globe"></i> <span>SMS Campaign</span></a></li>
+          <li class="nav-item"><a href="#" class="nav-link"><i data-feather="pie-chart"></i> <span>SMS Bonus</span></a></li>
+          
+          <li class="nav-label mg-t-25">Provisioning</li>
+          <li class="nav-item with-sub">
+            <a href="" class="nav-link"><i data-feather="shopping-cart"></i> <span>Offer ID</span></a>
+            <ul>
+              <li><a href="#">View all Offer ID</a></li>
+              <li><a href="#">Create an Offer ID</a></li>
+              <li><a href="#">Assign Offer ID</a></li>
+              <li><a href="#">View All Assigned Offer ID</a></li>
+              <li><a href="#">Detached Offer ID</a></li>
+              <li><a href="#">View All Detached</a></li>
+            </ul>
+          </li>
+          <li class="nav-item with-sub">
+            <a href="" class="nav-link"><i data-feather="briefcase"></i> <span>Offer Priority</span></a>
+            <ul>
+              <li><a href="#">Create Offer Priority</a></li>
+              <li><a href="#">View All</a></li>
+            </ul>
+          </li>
+          <li class="nav-item with-sub">
+            <a href="" class="nav-link"><i data-feather="credit-card"></i> <span>Card Group</span></a>
+            <ul>
+              <li><a href="#">View all</a></li>
+              <li><a href="#">Assigned Card Group</a></li>
+              <li><a href="#">View All Assigned</a></li>
+            </ul>
+          </li>
+          <li class="nav-item with-sub">
+            <a href="" class="nav-link"><i data-feather="activity"></i> <span>Service Class</span></a>
+            <ul>
+              <li><a href="#">Change Service Class</a></li>
+              <li><a href="#">View all</a></li>
+            </ul>
+          </li>
+          <li class="nav-item with-sub">
+            <a href="" class="nav-link"><i data-feather="database"></i> <span>HBB Whitelist</span></a>
+            <ul>
+              <li><a href="#">Create</a></li>
+              <li><a href="#">View all</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-label mg-t-25">File Base</li>
+          <li class="nav-item with-sub">
+            <a href="" class="nav-link"><i data-feather="file"></i> <span>File Base</span></a>
+            <ul>
+              <li><a href="#">View Profile</a></li>
+              <li><a href="#">Connections</a></li>
+              <li><a href="#">Groups</a></li>
+              <li><a href="#">Events</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-label mg-t-25">Transactions (Trails)</li>
+          <li class="nav-item"><a href="#" class="nav-link"><i data-feather="message-circle"></i> <span>SMS</span></a></li>
+          <li class="nav-item"><a href="#" class="nav-link"><i data-feather="message-square"></i> <span>Bonus SMS</span></a></li>
+          <li class="nav-item with-sub">
+            <a href="" class="nav-link"><i data-feather="shopping-cart"></i> <span>Offer ID</span></a>
+            <ul>
+              <li><a href="#">Trail</a></li>
+              <li><a href="#">Detach Offer Trail</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="#" class="nav-link"><i data-feather="folder"></i> <span>Card Group</span></a></li>
+          <li class="nav-item"><a href="#" class="nav-link"><i data-feather="activity"></i> <span>Service Class</span></a></li>
+          <li class="nav-item"><a href="#" class="nav-link"><i data-feather="database"></i> <span>HBB Whitelist</span></a></li>
+          <li class="nav-item"><a href="#" class="nav-link"><i data-feather="umbrella"></i> <span>SMS Delivery (policy)</span></a></li>
+        </ul>
+      </div>
+    </aside>
+    <!-- Side Navigation End -->
+
+    <!-- content-holder -->
+    <div class="content ht-100v pd-0">
+
+      <!-- content-header -->
+      <div class="content-header">
+        <div class="content-search">
+          <i data-feather="search"></i>
+          <input type="search" class="form-control" placeholder="Search...">
+        </div>
+        <nav class="nav">
+          <a href="" class="nav-link"><i data-feather="help-circle"></i></a>
+          <a href="" class="nav-link"><i data-feather="grid"></i></a>
+          <a href="" class="nav-link"><i data-feather="align-left"></i></a>
+        </nav>
+      </div>
+      <!-- content-header end -->
+
+      <!-- content-body -->
+      <div class="content-body">
+        <div class="container pd-x-0">
+          <div class="d-sm-flex align-items-center justify-content-between mg-b-20 mg-lg-b-25 mg-xl-b-30">
+            <div>
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb breadcrumb-style1 mg-b-10">
+                  <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+                  <li class="breadcrumb-item"><a href="#">SMS</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">SMS Trail</li>
+                </ol>
+              </nav>
+              <h4 class="mg-b-0 tx-spacing--1">SMS Trail</h4>
+            </div>
+          </div>
+
+          <div class="row row-xs">
+            <div class="col-lg-12 col-xl-12">
+              <div data-label="Example" class="df-example demo-table">
+                <table id="example2" class="table">
+                  <thead>
+                    <tr>
+                      <th data-priority="1" class="wd-15p">Customer Name</th>
+                      <th class="wd-10p">Channel</th>
+                      <th class="wd-3p">Account #</th>
+                      <th class="wd-2p">Cust. ID</th>
+                      <th class="wd-2p">Amount</th>
+                      <th data-priority="2" class="wd-10p">Date/Time</th>
+                      <th class="wd-2p">Rule</th>
+                      <th class="wd-2p text-center">Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="tx-bold tx-primary text-uppercase tx-12"><a class="tx-dark" href="case-1.html">ABDULRAHMAN OLUWASEGUN BALOGUN</a></td>
+                      <td class="tx-bold tx-primary text-uppercase tx-12"><a href="channel-1.html">Sterling OnePay</a>
+                      </td>
+                      <td class="tx-light tx-12">0059477108</td>
+                      <td class="tx-light tx-12">10230104</td>
+                      <td class="tx-bold tx-12">N10,233,323</td>
+                      <td class="tx-light tx-12">07/01/2019 11:52:28</td>
+                      <td class="tx-bold text-danger tx-12" data-toggle="tooltip" data-placement="top"
+                        title="NEW_USER_TO_NEW_BENEFICIARY">Rule 1</td>
+                      <td class="tx-12 tx-medium text-center" data-toggle="tooltip" data-placement="top"
+                        title="New Case"><a href="case-1.html"><i class="text-danger fas fa-star"></i> New</a>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td class="tx-bold tx-primary text-uppercase tx-12"><a href="case-1.html">WOMI OFEM PETER</a></td>
+                      <td class="tx-bold tx-primary text-uppercase tx-12"><a href="channel-1.html">Sterling OnePay</a>
+                      </td>
+                      <td class="tx-light tx-12">0064990447</td>
+                      <td class="tx-light tx-12">23675443</td>
+                      <td class="tx-bold tx-12">N423,323</td>
+                      <td class="tx-light tx-12">03/20/2018 04:52:28</td>
+                      <td class="tx-bold text-danger tx-12" data-toggle="tooltip" data-placement="top"
+                        title="NEW_USER_TO_NEW_BENEFICIARY">Rule 2</td>
+                      <td class="tx-12 tx-medium text-center" data-toggle="tooltip" data-placement="top"
+                        title="New Case"><a href="case-1.html" class="text-success"><i
+                            class="text-success fas fa-link"></i> Assigned</a>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td class="tx-bold tx-primary text-uppercase tx-12"><a href="case-1.html">IBIYEMI ESTHER
+                          OYEWUSI</a></td>
+                      <td class="tx-bold tx-primary text-uppercase tx-12"><a href="channel-1.html">ATM TRF/CASH WTD</a>
+                      </td>
+                      <td class="tx-light tx-12">0059477108</td>
+                      <td class="tx-light tx-12">10230104</td>
+                      <td class="tx-bold tx-12">N10,233,323</td>
+                      <td class="tx-light tx-12">04/26/2018 11:52:28</td>
+                      <td class="tx-bold text-danger tx-12" data-toggle="tooltip" data-placement="top"
+                        title="NEW_USER_TO_NEW_BENEFICIARY">Rule 1</td>
+                      <td class="tx-12 tx-medium text-center" data-toggle="tooltip" data-placement="top"
+                        title="New Case"><a href="case-1.html"><i class="text-danger fas fa-star"></i> New</a>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td class="tx-bold tx-primary text-uppercase tx-12"><a href="case-1.html">OLUDELE ADURAGBEMI
+                          AKINTOLA</a></td>
+                      <td class="tx-bold tx-primary text-uppercase tx-12"><a href="channel-1.html">Mobile Banking
+                          MFINO</a></td>
+                      <td class="tx-light tx-12">0059477108</td>
+                      <td class="tx-light tx-12">10230104</td>
+                      <td class="tx-bold tx-12">N10,233,323</td>
+                      <td class="tx-light tx-12">09/06/2018 11:52:28</td>
+                      <td class="tx-bold text-danger tx-12" data-toggle="tooltip" data-placement="top"
+                        title="NEW_USER_TO_NEW_BENEFICIARY">Rule 5</td>
+                      <td class="tx-12 tx-medium text-center" data-toggle="tooltip" data-placement="top"
+                        title="New Case"><a href="case-1.html" class="text-success"><i
+                            class="text-success fas fa-link"></i> Assigned</a>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td class="tx-bold tx-primary text-uppercase tx-12"><a href="case-1.html">John Hanni Obong</a>
+                      </td>
+                      <td class="tx-bold tx-primary text-uppercase tx-12"><a href="channel-1.html">Sterling OnePay</a>
+                      </td>
+                      <td class="tx-light tx-12">0059477108</td>
+                      <td class="tx-light tx-12">10230104</td>
+                      <td class="tx-bold tx-12">N10,233,323</td>
+                      <td class="tx-light tx-12">07/01/2019 11:52:28</td>
+                      <td class="tx-bold text-danger tx-12" data-toggle="tooltip" data-placement="top"
+                        title="NEW_USER_TO_NEW_BENEFICIARY">Rule 1</td>
+                      <td class="tx-12 tx-medium text-center" data-toggle="tooltip" data-placement="top"
+                        title="New Case"><a href="case-1.html"><i class="text-danger fas fa-star"></i> New</a>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td class="tx-bold tx-primary text-uppercase tx-12"><a href="case-1.html">MARYAM ABIOLA TOLASE</a>
+                      </td>
+                      <td class="tx-bold tx-primary text-uppercase tx-12"><a href="channel-1.html">Sterling OnePay</a>
+                      </td>
+                      <td class="tx-light tx-12">0064990447</td>
+                      <td class="tx-light tx-12">23675443</td>
+                      <td class="tx-bold tx-12">N423,323</td>
+                      <td class="tx-light tx-12">03/20/2018 04:52:28</td>
+                      <td class="tx-bold text-danger tx-12" data-toggle="tooltip" data-placement="top"
+                        title="NEW_USER_TO_NEW_BENEFICIARY">Rule 2</td>
+                      <td class="tx-12 tx-medium text-center" data-toggle="tooltip" data-placement="top"
+                        title="New Case"><a href="case-1.html" class="text-success"><i
+                            class="text-success fas fa-link"></i> Assigned</a>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td class="tx-bold tx-primary text-uppercase tx-12"><a href="case-1.html">IBRAHIM CHINDO</a></td>
+                      <td class="tx-bold tx-primary text-uppercase tx-12"><a href="channel-1.html">ATM TRF/CASH WTD</a>
+                      </td>
+                      <td class="tx-light tx-12">0059477108</td>
+                      <td class="tx-light tx-12">10230104</td>
+                      <td class="tx-bold tx-12">N10,233,323</td>
+                      <td class="tx-light tx-12">04/26/2018 11:52:28</td>
+                      <td class="tx-bold text-danger tx-12" data-toggle="tooltip" data-placement="top"
+                        title="NEW_USER_TO_NEW_BENEFICIARY">Rule 1</td>
+                      <td class="tx-12 tx-medium text-center" data-toggle="tooltip" data-placement="top"
+                        title="New Case"><a href="case-1.html"><i class="text-danger fas fa-star"></i> New</a>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td class="tx-bold tx-primary text-uppercase tx-12"><a href="case-1.html">Jane Doe</a></td>
+                      <td class="tx-bold tx-primary text-uppercase tx-12"><a href="channel-1.html">Mobile Banking
+                          MFINO</a></td>
+                      <td class="tx-light tx-12">0059477108</td>
+                      <td class="tx-light tx-12">10230104</td>
+                      <td class="tx-bold tx-12">N10,233,323</td>
+                      <td class="tx-light tx-12">09/06/2018 11:52:28</td>
+                      <td class="tx-bold text-danger tx-12" data-toggle="tooltip" data-placement="top"
+                        title="NEW_USER_TO_NEW_BENEFICIARY">Rule 1</td>
+                      <td class="tx-12 tx-medium text-center" data-toggle="tooltip" data-placement="top"
+                        title="New Case"><a href="case-1.html"><i class="text-danger fas fa-star"></i> New</a>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td class="tx-bold tx-primary text-uppercase tx-12"><a href="case-1.html">Obong Owo Emeka</a></td>
+                      <td class="tx-bold tx-primary text-uppercase tx-12"><a href="channel-1.html">Sterling OnePay</a>
+                      </td>
+                      <td class="tx-light tx-12">0059477108</td>
+                      <td class="tx-light tx-12">10230104</td>
+                      <td class="tx-bold tx-12">N10,233,323</td>
+                      <td class="tx-light tx-12">07/01/2019 11:52:28</td>
+                      <td class="tx-bold text-danger tx-12" data-toggle="tooltip" data-placement="top"
+                        title="NEW_USER_TO_NEW_BENEFICIARY">Rule 1</td>
+                      <td class="tx-12 tx-medium text-center" data-toggle="tooltip" data-placement="top"
+                        title="New Case"><a href="case-1.html"><i class="text-danger fas fa-star"></i> New</a>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td class="tx-bold tx-primary text-uppercase tx-12"><a href="case-1.html">Oluwaseun Akanbi</a>
+                      </td>
+                      <td class="tx-bold tx-primary text-uppercase tx-12"><a href="channel-1.html">Sterling OnePay</a>
+                      </td>
+                      <td class="tx-light tx-12">0064990447</td>
+                      <td class="tx-light tx-12">23675443</td>
+                      <td class="tx-bold tx-12">N423,323</td>
+                      <td class="tx-light tx-12">03/20/2018 04:52:28</td>
+                      <td class="tx-bold text-danger tx-12" data-toggle="tooltip" data-placement="top"
+                        title="NEW_USER_TO_NEW_BENEFICIARY">Rule 2</td>
+                      <td class="tx-12 tx-medium text-center" data-toggle="tooltip" data-placement="top"
+                        title="New Case"><a href="case-1.html" class="text-success"><i
+                            class="text-success fas fa-link"></i> Assigned</a>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td class="tx-bold tx-primary text-uppercase tx-12"><a href="case-1.html">John Doe Afolabi</a>
+                      </td>
+                      <td class="tx-bold tx-primary text-uppercase tx-12"><a href="channel-1.html">ATM TRF/CASH WTD</a>
+                      </td>
+                      <td class="tx-light tx-12">0059477108</td>
+                      <td class="tx-light tx-12">10230104</td>
+                      <td class="tx-bold tx-12">N10,233,323</td>
+                      <td class="tx-light tx-12">04/26/2018 11:52:28</td>
+                      <td class="tx-bold text-danger tx-12" data-toggle="tooltip" data-placement="top"
+                        title="NEW_USER_TO_NEW_BENEFICIARY">Rule 1</td>
+                      <td class="tx-12 tx-medium text-center" data-toggle="tooltip" data-placement="top"
+                        title="New Case"><a href="case-1.html"><i class="text-danger fas fa-star"></i> New</a>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td class="tx-bold tx-primary text-uppercase tx-12"><a href="case-1.html">Juliet Ekanem</a></td>
+                      <td class="tx-bold tx-primary text-uppercase tx-12"><a href="channel-1.html">web-thirdparty</a>
+                      </td>
+                      <td class="tx-light tx-12">0059477108</td>
+                      <td class="tx-light tx-12">10230104</td>
+                      <td class="tx-bold tx-12">N10,233,323</td>
+                      <td class="tx-light tx-12">01/06/2019 11:52:01</td>
+                      <td class="tx-bold text-danger tx-12" data-toggle="tooltip" data-placement="top"
+                        title="NEW_USER_TO_NEW_BENEFICIARY">Rule 1</td>
+                      <td class="tx-12 tx-medium text-center" data-toggle="tooltip" data-placement="top"
+                        title="New Case"><a href="case-1.html"><i class="text-danger fas fa-star"></i> New</a>
+                      </td>
+                    </tr>
+
+                  </tbody>
+                </table>
+              </div><!-- df-example -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- content-body end -->
+
+    </div>
+    <!-- content-holder end -->
+
+    <script src="assets/lib/jquery/jquery.min.js"></script>
+    <script src="assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/lib/feather-icons/feather.min.js"></script>
+    <script src="assets/lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+
+    <!-- Page Styles -->
+    <script src="assets/lib/prismjs/prism.js"></script>
+    <script src="assets/lib/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="assets/lib/datatables.net-dt/js/dataTables.dataTables.min.js"></script>
+    <script src="assets/lib/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="assets/lib/datatables.net-responsive-dt/js/responsive.dataTables.min.js"></script>
+    <script src="assets/lib/select2/js/select2.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.2/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.2/js/buttons.html5.min.js"></script>
+
+    <script src="assets/js/dashforge.js"></script>
+
+    <script>
+      $(function () {
+        'use strict'
+
+        $('#example2').DataTable({
+          dom: 'Bfrtip',
+          buttons: [
+          'copyHtml5',
+          'excelHtml5',
+          'csvHtml5',
+          'pdfHtml5'
+          ],
+          responsive: true,
+          language: {
+            searchPlaceholder: 'Search...',
+            sSearch: '',
+            lengthMenu: '_MENU_ items/page',
+          },
+          columnDefs: [{
+              responsivePriority: 1,
+              targets: 0
+            },
+            {
+              responsivePriority: 2,
+              targets: -1
+            }
+          ],
+          "order": [
+            [7, "desc"]
+          ]
+        });
+
+        // Initialize ToolTip
+        $('[data-toggle="tooltip"]').tooltip();
+
+
+      });
+    </script>
+
+  </body>
+</html>

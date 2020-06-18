@@ -1,0 +1,11 @@
+/* Table Customization */
+
+table.dataTable thead th,
+table.dataTable thead td 
+{
+    font-size: 10px !important;
+}
+
+table.dataTable {
+    width: 100% !important;
+}
