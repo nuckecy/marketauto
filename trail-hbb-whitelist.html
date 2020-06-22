@@ -177,7 +177,7 @@
 
           <div class="row row-xs">
             <div class="col-lg-12 col-xl-12">
-              <div data-label="Example" class="df-example demo-table">
+              <div data-label="Example" class="df-example demo-table display responsive nowrap" width="100%">
                 <table id="example2" class="table">
                   <thead>
                     <tr>
@@ -205,7 +205,7 @@
                       <td class="tx-12 tx-dark">Mifi</td>
                       <td class="tx-12 tx-dark">MIFI</td>
                       <td class="tx-12 tx-dark">232</td>
-                      <td class="tx-12 tx-dark">122223</td>
+                      <td class="tx-12 tx-dark">April 30, 2019, 2:27 PM</td>
                       <td class="tx-12 tx-dark"><span class="badge badge-success">Completed</span></td>
                       <td class="tx-12 tx-dark">None</td>
                       <td class="tx-12 tx-dark"><i></i></td>
@@ -253,6 +253,7 @@
         'use strict'
 
         $('#example2').DataTable({
+          responsive: true,
           dom: 'Bfrtip',
           buttons: [
           'copyHtml5',
@@ -260,24 +261,11 @@
           'csvHtml5',
           'pdfHtml5'
           ],
-          responsive: true,
           language: {
             searchPlaceholder: 'Search...',
             sSearch: '',
             lengthMenu: '_MENU_ items/page',
-          },
-          columnDefs: [{
-              responsivePriority: 1,
-              targets: 0
-            },
-            {
-              responsivePriority: 2,
-              targets: -1
-            }
-          ],
-          "order": [
-            [0, "desc"]
-          ]
+          }
         });
 
         // Initialize ToolTip

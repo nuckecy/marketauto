@@ -11282,12 +11282,20 @@ table.dataTable {
       position: absolute;
       line-height: 0;
       right: 10px; }
-    table.dataTable thead .sorting::before {
+    table.dataTable thead .sorting::before 
+    {
       content: '\f3d8';
-      top: 40%; }
-    table.dataTable thead .sorting::after {
+      top: 40%; 
+      color: #d3d3d3;
+      z-index: -100;
+    }
+    table.dataTable thead .sorting::after 
+    {
       content: '\f3d0';
-      top: 60%; }
+      top: 60%; 
+      color: #d3d3d3;
+      z-index: -100;
+    }
   table.dataTable tbody td.sorting_1 {
     background-color: #f3f4f7; }
   table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > td:first-child::before, table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > td:first-child::before {

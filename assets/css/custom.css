@@ -9,3 +9,9 @@ table.dataTable thead td
 table.dataTable {
     width: 100% !important;
 }
+
+.aside-body 
+{ 
+    overflow-y: auto !important; 
+    overflow-x: hidden !important;
+}
