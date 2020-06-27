@@ -9,14 +9,10 @@
     <!-- CSS Assets -->
     <link href="assets/lib/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
     <link href="assets/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
-    <link href="assets/lib/jqvmap/jqvmap.min.css" rel="stylesheet">
+    <link href="assets/lib/typicons.font/typicons.css" rel="stylesheet">
 
     <!-- Page CSS -->
     <link href="assets/lib/prismjs/themes/prism-vs.css" rel="stylesheet">
-    <link href="assets/lib/datatables.net-dt/css/jquery.dataTables.min.css" rel="stylesheet">
-    <link href="assets/lib/datatables.net-responsive-dt/css/responsive.dataTables.min.css" rel="stylesheet">
-    <link href="https://cdn.datatables.net/buttons/1.6.2/css/buttons.dataTables.min.css" rel="stylesheet">
-    <link href="assets/lib/select2/css/select2.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="assets/css/dashforge.css">
     <link rel="stylesheet" href="assets/css/dashforge.dashboard.css">
@@ -176,49 +172,216 @@
           </div>
 
           <div class="row row-xs">
-            <div class="col-lg-12 col-xl-12">
-              <div data-label="Example" class="df-example demo-table">
-                <table id="example2" class="table">
-                  <thead>
-                    <tr>
-                      <th class="tx-10 text-uppercase">Title</th>
-                      <th class="tx-10 text-uppercase">Description</th>
-                      <th class="tx-10 text-uppercase">Device Type</th>
-                      <th class="tx-10 text-uppercase">Service Class</th>
-                      <th class="tx-10 text-uppercase">No. of Recipient</th>
-                      <th class="tx-10 text-uppercase">Date Created</th>
-                      <th class="tx-10 text-uppercase">Status</th>
-                      <th class="tx-10 text-uppercase">Delivery Time</th>
-                      <th class="tx-10 text-uppercase">Is Scheduled</th>
-                      <th class="tx-10 text-uppercase">Scheduled Start</th>
-                      <th class="tx-10 text-uppercase">Scheduled End</th>
-                      <th class="tx-10 text-uppercase">Is Staggard</th>
-                      <th class="tx-10 text-uppercase">Delivery Days</th>
-                      <th class="tx-10 text-uppercase">Downloads</th>
-                      <th class="tx-10 text-uppercase">Action</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td class="tx-12 tx-dark">ABC</td>
-                      <td class="tx-12 tx-dark">Test</td>
-                      <td class="tx-12 tx-dark">Mifi</td>
-                      <td class="tx-12 tx-dark">MIFI</td>
-                      <td class="tx-12 tx-dark">232</td>
-                      <td class="tx-12 tx-dark">122223</td>
-                      <td class="tx-12 tx-dark"><span class="badge badge-success">Completed</span></td>
-                      <td class="tx-12 tx-dark">None</td>
-                      <td class="tx-12 tx-dark"><i></i></td>
-                      <td class="tx-12 tx-dark">None</td>
-                      <td class="tx-12 tx-dark">None</td>
-                      <td class="tx-12 tx-dark"><i></i></td>
-                      <td class="tx-12 tx-dark">[]</td>
-                      <td class="tx-12 tx-dark"></td>
-                      <td class="tx-12 tx-dark"></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div><!-- df-example -->
+            <div class="col-lg-7 col-xl-7">
+              <div id="wizard3">
+                <h3>Broadcast Profile</h3>
+                <section>
+                  <p class="mg-b-20">Name, Description & Type</p>
+                  <div class="row row-sm">
+                    <div class="form-group col-sm-6">
+                      <label>Name *</label>
+                      <input type="text" class="form-control" placeholder="Firstname">
+                    </div><!-- col -->
+                    <div class="form-group col-sm-6">
+                      <label>Type *</label>
+                      <select class="custom-select" required="">
+                      <option value="" disabled="" selected="">Select Year</option>
+                      <option value="1">2019</option>
+                      <option value="2">2018</option>
+                      <option value="3">2017</option>
+                      </select>
+                    </div><!-- col -->
+                    <div class="col-sm-12 col-md-12">
+                       <label>Description *</label>
+                      <textarea class="form-control" rows="2" placeholder="Textarea"></textarea>
+                    </div>
+                  </div>
+                </section>
+                <h3>Broadcast Content</h3>
+                <section>
+                  <p class="mg-b-20">Address, Message & Seedlist</p>
+                  <div class="row row-sm">
+                    <div class="form-group col-sm-6">
+                      <label>Sender Address *</label>
+                      <input type="text" class="form-control" placeholder="Address">
+                    </div><!-- col -->
+                    <div class="form-group col-sm-6">
+                      <label>Seed List</label>
+                      <input type="text" class="form-control" placeholder="Enter MSISDN and Press Enter">
+                    </div><!-- col -->
+                    <div class="col-sm-12 col-md-12">
+                      <label>Message * 0 char(s)</label>
+                      <textarea class="form-control" rows="2" placeholder="Textarea"></textarea>
+                    </div>
+                  </div>
+                </section>
+                <h3>Broadcast Format</h3>
+                <section>
+                  <p class="mg-b-20">Create Digital Format</p>
+                  <div class="row row-sm">
+                    <div class="form-group col-sm-6">
+                      <label>Upload Banner/CTA Image</label>
+                      <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="customFile">
+                        <label class="custom-file-label" for="customFile">Choose file</label>
+                      </div>
+                    </div><!-- col -->
+                    <div class="form-group col-sm-6">
+                      <label>Select Format Type</label>
+                      <select class="custom-select" required="">
+                        <option value="" disabled="" selected="">Select Format Type</option>
+                        <option value="1">App Download</option>
+                        <option value="2">USSD/SMS</option>
+                        <option value="3">Custom Forms</option>
+                      </select>
+                    </div><!-- col -->
+                  </div>
+                  <div class="row row-sm">
+                    <div class="form-group col-sm-12">
+                      <hr>
+                      <h6 class="">App Download - Store Links</h6>
+                    </div>
+                    <div class="form-group col-sm-6">
+                      <label>Android Link *</label>
+                      <input type="text" class="form-control" placeholder="Address">
+                    </div><!-- col -->
+                    <div class="form-group col-sm-6">
+                      <label>iOS Link *</label>
+                      <input type="text" class="form-control" placeholder="Address">
+                    </div><!-- col -->
+                  </div>
+                  <div class="row row-sm">
+                    <div class="form-group col-sm-12">
+                      <hr>
+                      <h6 class="">USSD/SMS - Product Codes</h6>
+                    </div>
+                  </div>
+                  <div class="row row-sm">
+                    <div class="form-group col-sm-6">
+                      <label>Product Name *</label>
+                      <input type="text" class="form-control" placeholder="Data 1000">
+                    </div><!-- col -->
+                    <div class="form-group col-sm-5">
+                      <label>Product Code *</label>
+                      <input type="text" class="form-control" placeholder="example *987*1000#">
+                    </div><!-- col -->
+                  </div>
+                  <div class="row row-sm">
+                    <div class="form-group col-sm-6">
+                      <label>Product Name *</label>
+                      <input type="text" class="form-control" placeholder="Data 1000">
+                    </div><!-- col -->
+                    <div class="form-group col-sm-5">
+                      <label>Product Code *</label>
+                      <input type="text" class="form-control" placeholder="example *987*1000#">
+                    </div><!-- col -->
+                    <div class="form-group col-sm-1">
+                      <label>Add</label>
+                      <i data-feather="plus-circle"></i>
+                    </div><!-- col -->
+                  </div>
+                  <div class="row row-sm">
+                    <div class="form-group col-sm-12">
+                      <hr>
+                      <h6 class="">Setup Custom Survey</h6>
+                    </div>
+                  </div>
+                  <div class="row row-sm">
+                    <div class="form-group col-sm-6">
+                      <label>Select Format Type</label>
+                      <select class="custom-select" required="">
+                        <option value="" disabled="" selected="">Select Format Type</option>
+                        <option value="1">App Download</option>
+                        <option value="2">USSD/SMS</option>
+                        <option value="3">Custom Forms</option>
+                      </select>
+                    </div><!-- col -->
+                    <div class="form-group col-sm-1">
+                      <label>Add</label>
+                      <i data-feather="plus-circle"></i>
+                    </div><!-- col -->
+                  </div>
+                  <div class="row row-sm">
+                    <div class="form-group col-sm-6">
+                      <label>Input Label (Name/Title) *</label>
+                      <input type="text" class="form-control" placeholder="Address">
+                    </div><!-- col -->
+                    <div class="form-group col-sm-6">
+                      <label>Input Type *</label>
+                      <select class="custom-select" required="">
+                        <option value="" disabled="" selected="">Select Input Type</option>
+                        <option value="1">Number</option>
+                        <option value="2">Text</option>
+                        <option value="3">Email</option>
+                      </select>
+                    </div><!-- col -->
+                  </div>
+                  <div class="row row-sm">
+                    <div class="form-group col-sm-6">
+                      <label>Input Label (Name/Title) *</label>
+                      <input type="text" class="form-control" placeholder="Address">
+                    </div><!-- col -->
+                    <div class="form-group col-sm-6">
+                      <label>Input Type *</label>
+                      <select class="custom-select" required="">
+                        <option value="" disabled="" selected="">Select Input Type</option>
+                        <option value="1">Number</option>
+                        <option value="2">Text</option>
+                        <option value="3">Email</option>
+                      </select>
+                    </div><!-- col -->
+                  </div>
+                </section>
+                <h3>Recipients</h3>
+                <section>
+                  <p class="mg-b-20">Choose Message Recipient</p>
+                  <div class="row row-sm">
+                    <div class="form-group col-sm-6">
+                      <label>Select Base *</label>
+                      <input type="text" class="form-control" placeholder="Address">
+                    </div><!-- col -->
+                    <div class="form-group col-sm-6">
+                      <label>Select file to Upload</label>
+                      <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="customFile">
+                        <label class="custom-file-label" for="customFile">Choose file</label>
+                      </div>
+                    </div><!-- col -->
+                  </div>
+                </section>
+                <h3>Delivery</h3>
+                <section>
+                  <p class="mg-b-20">Schedule Delivery</p>
+                  <div class="row row-sm">
+                    <div class="form-group col-sm-12">
+                      <div class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                        <label class="custom-control-label" for="customSwitch1">Enable Scheduled Deliver</label>
+                      </div>
+                    </div>
+                    <div class="form-group col-sm-6">
+                      <label>Date Range *</label>
+                      <input type="text" class="form-control" placeholder="Address">
+                    </div><!-- col -->
+                    <div class="form-group col-sm-6">
+                      <label>Delivery Time</label>
+                      <input type="text" class="form-control" placeholder="Address">
+                    </div><!-- col -->
+                  </div>
+                  <div class="row row-sm">
+                    <div class="form-group col-sm-12">
+                      <div class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="customSwitch2">
+                        <label class="custom-control-label" for="customSwitch2">Enable Staggard Schedule</label>
+                      </div>
+                    </div>
+                    <div class="form-group col-sm-6">
+                      <label>Select Day(s) of Week *</label>
+                      <input type="text" class="form-control" placeholder="Address">
+                    </div><!-- col -->
+                  </div>
+                </section>
+              </div>
             </div>
           </div>
         </div>
@@ -235,57 +398,69 @@
 
     <!-- Page Styles -->
     <script src="assets/lib/prismjs/prism.js"></script>
-    <script src="assets/lib/datatables.net/js/jquery.dataTables.min.js"></script>
-    <script src="assets/lib/datatables.net-dt/js/dataTables.dataTables.min.js"></script>
-    <script src="assets/lib/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
-    <script src="assets/lib/datatables.net-responsive-dt/js/responsive.dataTables.min.js"></script>
-    <script src="assets/lib/select2/js/select2.min.js"></script>
-    <script src="https://cdn.datatables.net/buttons/1.6.2/js/dataTables.buttons.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
-    <script src="https://cdn.datatables.net/buttons/1.6.2/js/buttons.html5.min.js"></script>
+    <script src="assets/lib/parsleyjs/parsley.min.js"></script>
+    <script src="assets/lib/jquery-steps/build/jquery.steps.min.js"></script>
 
     <script src="assets/js/dashforge.js"></script>
 
-    <script>
-      $(function () {
-        'use strict'
+<script>
+  $(function () {
+    'use strict'
 
-        $('#example2').DataTable({
-          dom: 'Bfrtip',
-          buttons: [
-          'copyHtml5',
-          'excelHtml5',
-          'csvHtml5',
-          'pdfHtml5'
-          ],
-          responsive: true,
-          language: {
-            searchPlaceholder: 'Search...',
-            sSearch: '',
-            lengthMenu: '_MENU_ items/page',
-          },
-          columnDefs: [{
-              responsivePriority: 1,
-              targets: 0
-            },
-            {
-              responsivePriority: 2,
-              targets: -1
+    $('#wizard2').steps({
+      headerTag: 'h3',
+      bodyTag: 'section',
+      autoFocus: true,
+      titleTemplate: '<span class="number">#index#</span> <span class="title">#title#</span>',
+      stepsOrientation: 1,
+      onStepChanging: function (event, currentIndex, newIndex) {
+        if (currentIndex < newIndex) {
+          // Step 1 form validation
+          if (currentIndex === 0) {
+            var fname = $('#firstname').parsley();
+            var lname = $('#lastname').parsley();
+
+            if (fname.isValid() && lname.isValid()) {
+              return true;
+            } else {
+              fname.validate();
+              lname.validate();
             }
-          ],
-          "order": [
-            [0, "desc"]
-          ]
-        });
+          }
 
-        // Initialize ToolTip
-        $('[data-toggle="tooltip"]').tooltip();
+          // Step 2 form validation
+          if (currentIndex === 1) {
+            var email = $('#email').parsley();
+            if (email.isValid()) {
+              return true;
+            } else {
+              email.validate();
+            }
+          }
+          // Always allow step back to the previous step even if the current step is not valid.
+        } else {
+          return true;
+        }
+      }
+    });
 
+    $('#wizard3').steps({
+      headerTag: 'h3',
+      bodyTag: 'section',
+      autoFocus: true,
+      titleTemplate: '<span class="number">#index#</span> <span class="title">#title#</span>',
+      stepsOrientation: 1
+    });
 
-      });
-    </script>
+    $('#wizard4').steps({
+      headerTag: 'h3',
+      bodyTag: 'section',
+      autoFocus: true,
+      titleTemplate: '<span class="number">#index#</span> <span class="title">#title#</span>'
+    });
+
+  });
+</script>
 
   </body>
 </html>
